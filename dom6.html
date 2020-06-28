@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambiar imagen con dom</title>
+</head>
+<body>
+	<section>
+		<figure>
+			<img src="img/hola.jpg" id="miImagen">
+			<button type="button" onclick="cambiarImg()">Cambiar imagen</button>
+		</figure>
+	</section>
+	<script type="text/javascript">
+		function cambiarImg(){
+			document.getElementById("miImagen").src="img/hola2.jpg";
+		}
+	</script>
+
+</body>
+</html>

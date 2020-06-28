@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indice de programas</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+</head>
+<body>
+	<section style="width: 50%; float: left;" >
+		<div style="width: 50%;">
+		<h1>Indice de Practicas</h1>
+		<h2>Karolk Alfredo Anguiano Godinez EVN-305</h2>
+		<div><p id="fecha"></p></div>
+		<ul>
+			<li><a href="calculadora.html">Practica 1 Calculadora</a></li>
+			<li><a href="factorial.html">Practica 2 Factorial</a></li>
+			<li><a href="cajas.html">Practica 3 Cajas</a></li>
+			<li><a href="formulario.html">Practica 4 Votos</a></li>
+			<li><a href="positivos.html">Practica 5 Suma</a></li>
+			<li><a href="parrafos.html">Practica 6 parrafos</a></li>
+			<li><a href="bordes.html">Practica 7 bordes</a></li>
+			<li><a href="tarjetas.html">Practica 8 tarjetas </a></li>
+			<p>(Dar click encima de la imagen para seleccionarla por favor tarjetas*)</p>
+
+		</ul>
+		</div>
+		<div><img src="img/yo.jpg" style="float: left; width: 100px;"></div>
+	</section>
+	<script type="text/javascript">
+		var meses=new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+			var dias= new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+			var f= new Date();
+			document.getElementById('fecha').innerHTML="Fecha "+dias[f.getDay()]+", "+f.getDate()+", "+"de "+meses[f.getMonth()]+" del "+f.getFullYear();
+	</script>
+	
+
+</body>
+</html>

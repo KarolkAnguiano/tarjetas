@@ -1,0 +1,13 @@
+*{
+	background-color: #00688E;
+	color: white;
+	margin-top: 20px;
+	margin: 20px;
+	padding: 5px;
+}
+.seccion{
+	width: 50%;
+	height: 500px;
+	background-color: red;
+	
+}

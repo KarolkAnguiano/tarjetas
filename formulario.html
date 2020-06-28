@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<body>
+	<div>
+		<h1>"Seleccione la sección de su ciudad"</h1>
+		<ol>1: Norte</ol><br>
+		<ol>2: Sur</ol><br>
+		<ol>3: Centro</ol><br>		
+	</div>
+	<form name="frmSeccion">
+		<input type="number" name="seccion" placeholder="Captura tu seccion">
+		<input type="button" value="Capturar" onclick="capturar(this.form)">
+		
+	</form>
+	<script type="text/javascript">
+		function capturar(frmSeccion){
+			var t=parseInt(frmSeccion.seccion.value);
+			switch(t){
+				case 1:
+				alert("Tu voto a sido emitido para la seccion Norte");
+				break;
+				case 2:
+				alert("Tu voto a sido emitido para la seccion Sur");
+				break;
+				case 3:
+				alert("Tu voto a sido emitido para la seccion Centro");
+				break;
+				default:
+				alert("Esta seccion no existe");
+				break;
+
+			}
+		}
+		
+	</script>
+
+
+</body>
+</html>

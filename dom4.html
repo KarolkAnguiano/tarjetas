@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estilos y Dom</title>
+</head>
+<body>
+	<section id="contenedor">
+		<h1 id="encabezado">Estilos de javascript</h1>
+		<p id="id1">Este el el parrafo 1</p>
+		<p id="id2">Este el el parrafo 2</p>
+		<p id="id3">Este el el parrafo que va a desaparecer</p>
+		<button type="button" onclick="cambios()">Cambios de CSS</button>
+	</section>
+	<script type="text/javascript">
+		document.getElementById("contenedor").style.backgroundColor="#f97300";
+		document.getElementById("id1").style.fontFamily="helvetica";
+		document.getElementById("id1").style.color="red";
+		document.getElementById("id1").style.fontSize="28px";
+		document.getElementById("id2").style.fontWeight="bold";
+		document.getElementById("id2").style.fontSize="19px";
+		function cambios(){
+			document.getElementById("encabezado").style.color="#045757";
+			document.getElementById("encabezado").style.fontFamily="helvetica";
+			document.getElementById("id3").style.display="none";
+		}
+	</script>
+
+</body>
+</html>

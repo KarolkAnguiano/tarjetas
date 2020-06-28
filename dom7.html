@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toast y dom</title>
+	<style>
+		#mensaje{
+			visibility: hidden;
+			min-width: 250px;
+			margin-left: -125px;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			border-radius: 2px;
+			padding: 16px;
+			position: fixed;
+			z-index: 1;
+			left: 50%;
+			bottom: 30px;
+		}
+		#mensaje.show{
+			visibility: visible;
+			animation: fadein .5s fadeout .5s 2.5s;
+			-webkit-animation:fadein .5s fadeout .5s 2.5s;
+		}
+		@keyframes fadein{
+			from{bottom:0;opacity: 0}
+			to{bottom: 30px;opacity: 1}
+		}
+		@-webkit-keyframes fadein{
+			from{bottom:0;opacity: 0}
+			to{bottom: 30px;opacity: 1}
+		}
+		@keyframes fadeout{
+			from{bottom:30px;opacity: 1}
+			to{bottom: 0;opacity: 0}
+		}
+		@-webkit-keyframes fadeout{
+			from{bottom:30px;opacity: 1}
+			to{bottom: 0;opacity: 0}
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Barra de mensaje alterna</h1>
+	<p>da click en el boton para aparecer un mensaje alterno</p>
+	<button type="button" onclick="mostrar()">Mostrar mensaje</button>
+
+	<div id="mensaje">Mostrar algun texto pequeño</div>
+	<script type="text/javascript">
+		function mostrar(){
+			var x=document.getElementById("mensaje");
+			x.className="show";
+			setTimeout(function(){x.className=x.className.replace("show", "");},3000);
+
+		}
+	</script>
+
+</body>
+</html>

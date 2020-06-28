@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numeros positivos</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div>
+		<h1>Sumar numeros hasta que inserte 0 o un numero negativo</h1>	
+		<button type="button" onclick="suma();">Capturar</button>
+	</div>
+	<script type="text/javascript">
+		function suma(){
+			var numero=parseInt(prompt("Ingrese un numero"));
+			var suma=0;
+			while(numero!=0){
+				if (numero>=0) {
+					suma=suma+numero;
+					alert("La cantidad que lleva acumulada es de "+ suma);
+					var numero=parseInt(prompt("Ingrese otro numero"));
+				}else{
+					alert("El total fue de "+ suma);
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>

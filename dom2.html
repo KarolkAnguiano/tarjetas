@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fecha, arreglos y DOM</title>
+</head>
+<body>
+	<section>
+		Contenido principal
+		<footer>
+			<p id="fecha"></p>
+			<p id="hora"></p>
+		</footer>
+		<script type="text/javascript">
+			var meses=new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+			var dias= new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+			var f= new Date();
+			document.getElementById('fecha').innerHTML="Hoy es "+dias[f.getDay()]+", "+f.getDate()+", "+"de "+meses[f.getMonth()]+"del "+f.getFullYear();
+			var horas=f.getHours();
+			var minutos=f.getMinutes();
+			document.getElementById('hora').innerHTML="Son las "+ horas+":"+minutos;
+		</script>
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarjetas de felicitaciones!!!!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+</head>
+<body>
+	<section class="titulo">
+	<div>Crea tu tarjeta de felicitacion</div>
+	</section> 
+	<div class="subtitulo">Elije tu tema</div>
+	<section class="botones">
+		<input type="radio" onclick="cambiarImg()" style="margin: 40px;">San valentin</input>
+		<input type="radio" onclick="cambiarImg2()" style="margin: 40px;">Cumpleaños</input>
+		<input type="radio" onclick="cambiarImg3()" style="margin: 40px;">Motivacion</input>
+	</section>
+	<div class="subtitulo">Elige tu imagen</div>
+	<section>
+		<div id="muestras">
+		<img src="img/valentin.jpg" class="imagenes" id="miImagen1" name="primera" onclick="muestra('primera');">
+		<img src="img/cumple.jpg" class="imagenes" id="miImagen2" name="segunda" onclick="muestra('segunda');">
+		<img src="img/motivacion.jpg" class="imagenes" id="miImagen3" name="tercera" onclick="muestra('tercera');">
+		</div>
+	<section>
+		<div style=" float: left; width: 100%;" class=" contenedor">
+		<div class="subtitulo">Titulo</div>
+			<input type="text" name="titulo" placeholder="Ingresa el titulo" id="titulo" onchange="document.getElementById('txtTitulo').innerHTML = titulo = this.value"><br><br>
+			<input type="text" name="subtitulo" placeholder="Ingresa el subtitulo" id="subtitulo" onchange="document.getElementById('txtSubtitulo').innerHTML = subtitulo = this.value"><br><br>
+			<input type="text" name="autor" placeholder="Ingresa el nombre del autor" id="autor" onchange="document.getElementById('txtAutor').innerHTML = autor = this.value"><br><br>
+			<input type="textarea" class="imbox" placeholder="Escribe tu mensaje" name="mensaje" id="mensaje" onchange="document.getElementById('txtMensaje').innerHTML = mensaje = this.value"><br><br>
+			<input type="button" value="Generar" onclick="generar();" style="margin: 20px;"></input>
+			<label>Color azul</label><input type="radio" value="#0596A6" id="colors" name="" onchange="document.getElementById('caja').style.background = caja = this.value">
+			<label>Color Rojo</label><input type="radio" value="#B3152A" id="colors" name="" onchange="document.getElementById('caja').style.background = caja = this.value">
+			<label>Color Verde</label><input type="radio" value="#C4E0A4" id="colors" name="" onchange="document.getElementById('caja').style.background = caja = this.value">
+
+		</div>
+	</section>
+	<section id="caja" style=" display: none ; float: left;" class="Impresion">
+		<div id="tarjeta">
+			<h1 id="txtTitulo" class="titulo"></h1>
+			<h3 id="txtSubtitulo" class="titulo"></h3>
+			<center><div id="visor"><img src="img/cumple.jpg" class="fotoT" id="pantalla"></div></center>
+			<div class="cuerpo"><p id="txtMensaje"></p></div>
+		</div>
+		
+		<div class="autorr" id="caja">
+			<p id="txtAutor"></p>
+		</div>
+		<div class="fecha" id="caja">
+			<p id="fecha"></p>
+		</div>
+		
+	</section>
+	<script type="text/javascript">
+		var titulo;
+		var subtitulo;
+		var autor;
+		var texto;
+		function cambiarImg(){
+			document.getElementById("miImagen1").src="img/valentin.jpg";
+			document.getElementById("miImagen2").src="img/valentin2.jpg";
+			document.getElementById("miImagen3").src="img/valentin3.jpg";
+		}
+		function cambiarImg2(){
+			document.getElementById("miImagen1").src="img/cumple.jpg";
+			document.getElementById("miImagen2").src="img/cumple2.jpg";
+			document.getElementById("miImagen3").src="img/cumple3.jpg";
+		}
+		function cambiarImg3(){
+			document.getElementById("miImagen1").src="img/motivacion.jpg";
+			document.getElementById("miImagen2").src="img/motivacion2.png";
+			document.getElementById("miImagen3").src="img/motivacion3.jpg";
+		}
+		function generar(){
+			document.getElementById("caja").style.display="block";
+
+
+		}
+		function muestra(num) {
+         imagen = document.images[num].src
+         comentario = document.images[num].alt
+         grande = document.images["pantalla"]
+         texto = document.getElementById("descripcion")
+         grande.src = imagen
+         texto.innerHTML = comentario
+         }
+
+		
+		
+		var meses=new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+			var dias= new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+			var f= new Date();
+			document.getElementById('fecha').innerHTML="Fecha "+dias[f.getDay()]+", "+f.getDate()+", "+"de "+meses[f.getMonth()]+" del "+f.getFullYear();
+
+	</script>
+</body>
+</html>

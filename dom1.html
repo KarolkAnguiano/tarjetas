@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom y formulario</title>
+</head>
+<body>
+	<section id="contenedor">
+		<form name="formu" method="post">
+			<label>cuanto es 10*10?</label>
+			<input type="number" name="resultado">
+			<input type="button" value="Responder" onclick="evaluar(this.form);"></input>
+			
+		</form>
+		<p id="respuesta"></p>
+	</section>
+	<script type="text/javascript">
+		function evaluar(formu){
+			var r=formu.resultado.value;
+			if(r==100){
+				document.getElementById("respuesta").innerHTML="Es correcto";
+			}else{
+				document.getElementById("respuesta").innerHTML="No es correcto";
+			}
+		}
+	</script>
+
+</body>
+</html>

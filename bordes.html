@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagenes y Dom</title>
+</head>
+<body style="text-align: center;">
+	<figure>
+		<img src="img/hola.jpg" id="hola" style="border: 50px solid #f97300;" title="Probando bordes" width="500" height="400">
+	</figure>
+	<form name="formu">
+		<input type="button" value="Borde punteado" onclick="bordeP()" style="margin: 20px;">	
+		<label style="margin: 20px;">Escoge tu color de borde</label><input type="color" id="colors" name="colorB" onclick="Cambiarcolor()"><br><br>
+		<input type="button" value="Cambiar a 10px de ancho de borde" onclick="setBorderWidth(10);">
+		<input type="button" value="Cambiar a 20px de ancho de borde" onclick="setBorderWidth(20);"><br><br>
+		<label>Cambiar el ancho del borde para notar el cambio de tipo de borde</label><br><br>
+		<label>Dar doble click para cambiar el color de borde</label>
+
+	</form>	
+	<script type="text/javascript">
+		function setBorderWidth(x){
+			document.getElementById("hola").style.borderWidth=x+"px";
+
+
+		}
+		function Cambiarcolor(hola){
+			let color = document.getElementById("colors").value;
+			document.getElementById("hola").style.borderColor= color;
+		}
+		function bordeP(){
+			document.getElementById("hola").style.border = "thin dotted red ";
+
+		}
+
+	</script>
+
+</body>
+</html>

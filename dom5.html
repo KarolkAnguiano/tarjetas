@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagenes y Dom</title>
+</head>
+<body>
+	<figure>
+		<img src="img/hola.jpg" id="hola" style="border: 50px solid #f97300;" title="Probando bordes" width="500" height="400">
+	</figure>
+	<form name="formu">
+		<select name="tipoB">
+			<option value="dotted"> puntos</option>
+			<option value="dashed"> guiones</option>
+			<option value="double"> doble</option>
+			
+		</select>
+		<input type="button" value="Cambiar a 50px de ancho de borde" onclick="setBorderWidth(50);">
+		<input type="button" value="Cambiar a 20px de ancho de borde" onclick="setBorderWidth(20);">
+		<input type="color" name="colorB">
+		
+	</form>	
+	<script type="text/javascript">
+		function setBorderWidth(x){
+			document.getElementById("hola").style.borderWidth=x+"px";
+		}
+	</script>
+
+</body>
+</html>

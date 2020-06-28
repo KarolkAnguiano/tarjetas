@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cajas article</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body onload="ciclo();">
+	<script type="text/javascript">
+		var numero=prompt("Introduce la cantidad de cajas que desea");
+		if (numero<8) {
+			function ciclo(){
+			var i=1;
+			while(i<=numero	){
+			document.write('<article id="caja" style="background-color:#10375c; color:#f3c623; margin:10px; padding:20px">Caja '+i+'</article>');
+			i++;
+			}
+			
+		}
+		}else{
+			function ciclo(){
+			var i=1;
+			while(i<=numero	){
+			document.write('<article id="caja" style="background-color:#f3c623; color:#10375c; margin:10px; padding:20px; width:20px; height:20px; float: left;">Caja '+i+'</article>');
+			i++;
+			}
+			
+		}
+
+		}
+	</script>
+
+</body>
+</html>
